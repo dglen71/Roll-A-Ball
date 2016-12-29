@@ -45,6 +45,13 @@ public class PlayerController : MonoBehaviour {
 
 		}
 
+		/*
+		if (transform.position.y > 0.5f) {
+
+			transform.position = new Vector3(transform.position.x, 0.5f, transform.position.z);
+		}
+		*/
+
 
 
 	}
@@ -60,7 +67,7 @@ public class PlayerController : MonoBehaviour {
 			
 			rb.AddForce (movement * speed);
 
-		} else {
+		} else if (SpedUp == true) {
 
 			rb.AddForce (movement * speed * 2);
 		}
